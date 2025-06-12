@@ -46,7 +46,7 @@ const Hero = () => {
         // House connection points - left, right sides and center
         const houseLeftX = houseRect.left - containerRect.left;
         const houseRightX = (houseRect.left + houseRect.width) - containerRect.left;
-        const houseCenterX = (houseRect.left + houseRect.width / 2) - containerRect.left;
+        // const houseCenterX = (houseRect.left + houseRect.width / 2) - containerRect.left;
         const houseConnectionY = (houseRect.top + houseRect.height / 2) - containerRect.top;
         
         // Convert to SVG coordinates (scale to viewBox)
