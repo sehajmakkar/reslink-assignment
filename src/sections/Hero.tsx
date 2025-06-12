@@ -67,16 +67,16 @@ const Hero = () => {
         const houseConnectionSvgY = houseConnectionY * scaleY;
         
     
-        const solarPath = `M${solarSvgX-80} ${solarSvgY} L${solarSvgX - 80} ${solarSvgY + 80} L${solarSvgX - 80} ${houseConnectionSvgY - 60} Q${solarSvgX - 80} ${houseConnectionSvgY - 40} ${solarSvgX - 60} ${houseConnectionSvgY - 40} L${houseLeftSvgX+10} ${houseConnectionSvgY-40}`;
+        const solarPath = `M${solarSvgX-80} ${solarSvgY} L${solarSvgX - 80} ${solarSvgY + 80} L${solarSvgX - 80} ${houseConnectionSvgY - 60} Q${solarSvgX - 80} ${houseConnectionSvgY - 40} ${solarSvgX - 60} ${houseConnectionSvgY - 40} L${houseLeftSvgX+80} ${houseConnectionSvgY-40}`;
         
         
-        const gridPath = `M${gridSvgX-80} ${gridSvgY} L${gridSvgX+80} ${gridSvgY + 60} L${gridSvgX + 80} ${gridSvgY + 80} L${gridSvgX + 80} ${houseConnectionSvgY - 60} Q${gridSvgX + 80} ${houseConnectionSvgY - 40} ${gridSvgX + 60} ${houseConnectionSvgY - 40} L${houseRightSvgX-40} ${houseConnectionSvgY-40}`;
+        const gridPath = `M${gridSvgX+80} ${gridSvgY} L${gridSvgX+80} ${gridSvgY + 60} L${gridSvgX + 80} ${gridSvgY + 80} L${gridSvgX + 80} ${houseConnectionSvgY - 60} Q${gridSvgX + 80} ${houseConnectionSvgY - 40} ${gridSvgX + 60} ${houseConnectionSvgY - 40} L${houseRightSvgX-80} ${houseConnectionSvgY-40}`;
         
        
-        const loadPath = `M${loadSvgX-80} ${loadSvgY} L${loadSvgX-80} ${loadSvgY - 60}  L${loadSvgX - 80} ${houseConnectionSvgY + 60} Q${loadSvgX - 80} ${houseConnectionSvgY + 40} ${loadSvgX - 60} ${houseConnectionSvgY + 40} L${houseLeftSvgX} ${houseConnectionSvgY}`;
+        const loadPath = `M${loadSvgX-80} ${loadSvgY} L${loadSvgX-80} ${loadSvgY - 60}  L${loadSvgX - 80} ${houseConnectionSvgY + 60} Q${loadSvgX - 80} ${houseConnectionSvgY + 40} ${loadSvgX - 60} ${houseConnectionSvgY + 40} L${houseLeftSvgX+40} ${houseConnectionSvgY+40}`;
         
         
-        const batteryPath = `M${batterySvgX} ${batterySvgY} L${batterySvgX+80} ${batterySvgY} L${batterySvgX + 80} ${houseConnectionSvgY + 60} Q${batterySvgX + 80} ${houseConnectionSvgY + 40} ${batterySvgX + 60} ${houseConnectionSvgY + 40} L${houseRightSvgX} ${houseConnectionSvgY}`;
+        const batteryPath = `M${batterySvgX} ${batterySvgY} L${batterySvgX+80} ${batterySvgY} L${batterySvgX + 80} ${houseConnectionSvgY + 60} Q${batterySvgX + 80} ${houseConnectionSvgY + 40} ${batterySvgX + 60} ${houseConnectionSvgY + 40} L${houseRightSvgX-40} ${houseConnectionSvgY+40}`;
         
         setPaths({
           loadPath,
