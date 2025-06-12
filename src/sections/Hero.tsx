@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const Hero = () => {
-  const loadCardRef = useRef(null);
-  const batteryCardRef = useRef(null);
-  const houseRef = useRef(null);
-  const solarSectionRef = useRef(null);
-  const gridSectionRef = useRef(null);
+  const loadCardRef = useRef<HTMLDivElement>(null);
+  const batteryCardRef = useRef<HTMLDivElement>(null);
+  const houseRef = useRef<HTMLDivElement>(null);
+  const solarSectionRef = useRef<HTMLDivElement>(null);
+  const gridSectionRef = useRef<HTMLDivElement>(null);
   const [paths, setPaths] = useState({
     loadPath: "",
     batteryPath: "",
@@ -19,7 +19,9 @@ const Hero = () => {
   useEffect(() => {
     const calculatePaths = () => {
       if (loadCardRef.current && batteryCardRef.current && houseRef.current && solarSectionRef.current && gridSectionRef.current) {
-        const containerRect = loadCardRef.current.closest('.min-h-screen').getBoundingClientRect();
+        const containerElement = loadCardRef.current.closest('.min-h-screen');
+        if (!containerElement) return;
+        const containerRect = containerElement.getBoundingClientRect();
         
         // Get positions relative to the container
         const loadRect = loadCardRef.current.getBoundingClientRect();
@@ -63,7 +65,7 @@ const Hero = () => {
         const gridSvgY = gridCenterY * scaleY;
         const houseLeftSvgX = houseLeftX * scaleX;
         const houseRightSvgX = houseRightX * scaleX;
-        const houseCenterSvgX = houseCenterX * scaleX;
+        // const houseCenterSvgX = houseCenterX * scaleX;
         const houseConnectionSvgY = houseConnectionY * scaleY;
         
     
